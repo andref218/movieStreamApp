@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+/* ===== ROOT VARIABLES ===== */
+/*---------
+/*Global variables*/
+:root {
+  /* Base radius */
+  --radius: 0.625rem;
+
+  /* Typography */
+  font-family: "Inter", "Poppins", system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+
+  /* Rendering optimizations */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Cineflow brand colors */
+  --cineflow-red: #e50914;
+  --cineflow-red-hover: #f40612;
+  --cineflow-dark: #141414;
+  --cineflow-gray: #2f2f2f;
+}
+
+#root {
+  margin: auto;
+}
+
+/* ===== BASE STYLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== INTERACTIVE ELEMENTS ===== */
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--cineflow-red-hover);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.cineflow-red {
+  color: var(--cineflow-red);
+}
+.cineflow-bg {
+  background-color: var(--cineflow-red);
+}
+.cineflow-dark {
+  background-color: var(--cineflow-dark);
+}
+.cineflow-gray {
+  background-color: var(--cineflow-gray);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
