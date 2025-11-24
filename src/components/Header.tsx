@@ -1,3 +1,5 @@
+import SearchBar from "./SearchBar";
+
 const Header = () => {
   return (
     <header
@@ -11,6 +13,7 @@ const Header = () => {
             CineFlow
           </h1>
         </div>
+        <SearchBar />
       </div>
     </header>
   );
