@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
-import type { Movie, MovieListProps } from "../types";
+import type { MovieCardProps } from "@/types";
 const TMDB_IMAGES_ASSET_URL = "https://image.tmdb.org/t/p/w500/";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, position }: MovieCardProps) => {
   return (
     <Card
       className="group relative overflow-hidden cursor-pointer transition-all 
