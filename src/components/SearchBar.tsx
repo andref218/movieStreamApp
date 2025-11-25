@@ -1,33 +1,33 @@
-import { LucideSearch, Search } from "lucide-react";
+import { LucideSearch } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import MOVIE_DATA from "../data/mockdata.json";
-import type { Movie } from "@/types";
+//import MOVIE_DATA from "../data/mockdata.json";
+//import type { Movie } from "@/types";
+import { useSearchStore } from "../store/searchStore";
 
 const SearchBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  function searchQuery(query: string) {
-    console.log("Searching for", query);
-    const results = MOVIE_DATA.results.filter((movie: Movie) =>
-      movie.title.toLowerCase().includes(query.toLowerCase())
-    );
-    console.log("Results", results);
-  }
+  const setQuery = useSearchStore((state) => state.setQuery);
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
     console.log("Search Query", query);
-    searchQuery(query);
+    setQuery(query);
   };
 
+  //If user click outside the input box, box disappear
+  //If there's text in the input box, the inout stays on the Screen
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
+      const clickedOutside =
         containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
+        !containerRef.current.contains(event.target as Node);
+
+      const hasText = inputRef.current && inputRef.current.value.trim() !== "";
+
+      if (clickedOutside && !hasText) {
+        // Only closes if input is empty
         setIsVisible(false);
       }
     };
@@ -46,6 +46,7 @@ const SearchBar = () => {
             <LucideSearch className="ml-2 w-5 h-5 text-gray-400" />
             <input
               type="text"
+              ref={inputRef}
               onChange={handleChangeQuery}
               placeholder="Movie Title..."
               className="flex-1 bg-transparent px-2 py-1 text-white outline-none"
