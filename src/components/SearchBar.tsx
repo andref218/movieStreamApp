@@ -16,6 +16,10 @@ const SearchBar = () => {
     const value = event.target.value;
     console.log("Search Query", query);
     setQuery(value);
+    if (value.trim() === "") {
+      router.navigate({ to: "/" });
+      return;
+    }
     router.navigate({
       to: "/search",
       search: { query: value },
