@@ -3,17 +3,23 @@ import { useState, useRef, useEffect } from "react";
 //import MOVIE_DATA from "../data/mockdata.json";
 //import type { Movie } from "@/types";
 import { useSearchStore } from "../store/searchStore";
+import { router } from "../routes/router";
 
 const SearchBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const query = useSearchStore((state) => state.query);
   const setQuery = useSearchStore((state) => state.setQuery);
 
   const handleChangeQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const query = event.target.value;
+    const value = event.target.value;
     console.log("Search Query", query);
-    setQuery(query);
+    setQuery(value);
+    router.navigate({
+      to: "/search",
+      search: { query: value },
+    });
   };
 
   //If user click outside the input box, box disappear
