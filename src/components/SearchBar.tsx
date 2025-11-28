@@ -1,7 +1,5 @@
 import { LucideSearch } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-//import MOVIE_DATA from "../data/mockdata.json";
-//import type { Movie } from "@/types";
 import { useSearchStore } from "../store/searchStore";
 import { router } from "../routes/router";
 
@@ -9,6 +7,8 @@ const SearchBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Query and setter from Zustand
   const query = useSearchStore((state) => state.query);
   const setQuery = useSearchStore((state) => state.setQuery);
 
@@ -16,10 +16,12 @@ const SearchBar = () => {
     const value = event.target.value;
     console.log("Search Query", query);
     setQuery(value);
+
     if (value.trim() === "") {
       router.navigate({ to: "/" });
       return;
     }
+
     router.navigate({
       to: "/search",
       search: { query: value },
@@ -27,7 +29,7 @@ const SearchBar = () => {
   };
 
   //If user click outside the input box, box disappear
-  //If there's text in the input box, the inout stays on the Screen
+  //If there's text in the input box, the input stays on the Screen
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const clickedOutside =
@@ -57,6 +59,7 @@ const SearchBar = () => {
             <input
               type="text"
               ref={inputRef}
+              value={query}
               onChange={handleChangeQuery}
               placeholder="Movie Title..."
               className="flex-1 bg-transparent px-2 py-1 text-white outline-none"

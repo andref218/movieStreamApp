@@ -24,4 +24,10 @@ export const Route = createRootRoute({
     </>
   ),
   notFoundComponent: NotFoundPage,
+  errorComponent: ({ error }) => (
+    <div>
+      <Header />
+      <div className="container">Something wrong happened. {error.message}</div>
+    </div>
+  ),
 });

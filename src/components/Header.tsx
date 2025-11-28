@@ -1,6 +1,16 @@
 import SearchBar from "./SearchBar";
+import { router } from "../routes/router";
+import { useSearchStore } from "@/store/searchStore";
 
 const Header = () => {
+  const setQuery = useSearchStore((state) => state.setQuery);
+
+  const handleClickHome = () => {
+    // Clears Search Input
+    setQuery("");
+    // Goes to HomePage
+    router.navigate({ to: "/" });
+  };
   return (
     <header
       className="relative top-0 left-0 right-0 z-[100] 
@@ -9,7 +19,10 @@ const Header = () => {
     >
       <div className="flex justify-between items-center px-10">
         <div className="flex-shrink-0">
-          <h1 className="text-xl lg:text-4xl font-bold text-red-600">
+          <h1
+            onClick={handleClickHome}
+            className="text-xl lg:text-4xl font-bold text-red-600 cursor-pointer"
+          >
             CineFlow
           </h1>
         </div>

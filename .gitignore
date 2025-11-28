@@ -28,3 +28,7 @@ dist-ssr
 
 # TanStack Router / Start generated
 .tanstack/
+
+# Environment files
+.env
+.env.local
