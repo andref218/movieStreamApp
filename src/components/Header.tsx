@@ -1,6 +1,12 @@
 import SearchBar from "./SearchBar";
 import { router } from "../routes/router";
 import { useSearchStore } from "@/store/searchStore";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 
 const Header = () => {
   const setQuery = useSearchStore((state) => state.setQuery);
@@ -26,7 +32,26 @@ const Header = () => {
             CineFlow
           </h1>
         </div>
-        <SearchBar />
+        <div className="flex items-center gap-4">
+          <SignedOut>
+            <SearchBar />
+            <div
+              className="
+                px-4 py-2 rounded bg-red-600 text-white font-semibold
+                hover:bg-red-500 hover:scale-105 cursor-pointer
+                active:scale-95 transition-transform duration-150
+                inline-block ml-2"
+            >
+              <SignInButton mode="modal">Sign In</SignInButton>
+            </div>
+          </SignedOut>
+          <SignedIn>
+            <SearchBar />
+            <div className="ml-2 flex items-center">
+              <UserButton />
+            </div>
+          </SignedIn>
+        </div>
       </div>
     </header>
   );
