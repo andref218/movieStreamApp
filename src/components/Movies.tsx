@@ -14,8 +14,8 @@ const Popular = () => {
         </div>
       ) : isError ? (
         <div className="text-red-500">Error: {error.message}</div>
-      ) : movies && movies.length > 0 ? (
-        <MovieList movies={movies} />
+      ) : movies && movies.results.length > 0 ? (
+        <MovieList movies={movies.results} />
       ) : (
         <div>No movies were found.</div>
       )}
