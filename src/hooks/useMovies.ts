@@ -1,4 +1,4 @@
-import type { Movie, MoviesResponse } from "@/types";
+import type { MoviesResponse } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 
 const token = import.meta.env.VITE_TMDB_AUTH_TOKEN;

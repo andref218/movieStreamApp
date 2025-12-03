@@ -32,7 +32,7 @@ const Hero = () => {
               onClick={() => openSignIn({})}
             >
               Get started
-              <i className="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-angle-right"></i>
             </button>
           </SignedOut>
 

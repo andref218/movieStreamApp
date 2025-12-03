@@ -1,6 +1,6 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { TanStackDevtools } from "@tanstack/react-devtools";
+//import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+//import { TanStackDevtools } from "@tanstack/react-devtools";
 import NotFoundPage from "@/components/NotFoundPage";
 import Header from "@/components/Header";
 
@@ -9,7 +9,7 @@ export const Route = createRootRoute({
     <>
       <Header />
       <Outlet />
-      {/* Icon from Tanstack Router to help understand the routes*/}
+      {/* Icon from Tanstack Router to help understand the routes
       <TanStackDevtools
         config={{
           position: "bottom-left",
@@ -20,7 +20,7 @@ export const Route = createRootRoute({
             render: <TanStackRouterDevtoolsPanel />,
           },
         ]}
-      />
+      />*/}
     </>
   ),
   notFoundComponent: NotFoundPage,
