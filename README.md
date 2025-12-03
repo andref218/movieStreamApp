@@ -72,8 +72,48 @@ VITE_TMDB_AUTH_TOKEN=your_tmdb_bearer_token_here
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key_here
 ```
 
-4. Run the development server:
+4. Clerk Setup (Important)
+
+For Developers:
+
+- To run the app locally and test authentication, you need a Clerk developer account to get a Frontend API key.
+- Sign up at Clerk and create a new application. Copy the Frontend API key to your .env.
+
+5. Run the development server:
 
 ```bash
 npm run dev
+```
+
+## 📂 Project Structure
+
+movieStreamApp/
+├── src/
+│ ├── components/ # React components
+│ │ ├── Header.tsx
+│ │ ├── Hero.tsx
+│ │ ├── MovieCard.tsx
+│ │ ├── MovieList.tsx
+│ │ ├── Movies.tsx
+│ │ ├── NotFoundPage.tsx
+│ │ ├── Pagination.tsx
+│ │ ├── SearchBar.tsx
+│ ├── hooks/ # Custom React hooks
+│ │ ├── useMovies.ts
+│ ├── store/ # Zustand store
+│ │ └── searchStore.ts
+│ ├── routes/ # TanStack Router routes
+│ │ └── \_\_root.tsx
+│ │ └── index.tsx
+│ │ └── router.ts
+│ │ └── search.tsx
+│ ├── data/ # Mock data and types
+├── public/ # Static assets
+├── .env # Environment variables
+├── vite.config.ts # Vite configuration
+├── vitest.config.ts # Vitest configuration
+└── tailwind.config.js # Tailwind CSS configuration
+
+```
+
 ```
