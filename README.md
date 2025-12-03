@@ -87,33 +87,31 @@ npm run dev
 
 ## 📂 Project Structure
 
+```text
 movieStreamApp/
 ├── src/
-│ ├── components/ # React components
-│ │ ├── Header.tsx
-│ │ ├── Hero.tsx
-│ │ ├── MovieCard.tsx
-│ │ ├── MovieList.tsx
-│ │ ├── Movies.tsx
-│ │ ├── NotFoundPage.tsx
-│ │ ├── Pagination.tsx
-│ │ ├── SearchBar.tsx
-│ ├── hooks/ # Custom React hooks
-│ │ ├── useMovies.ts
-│ ├── store/ # Zustand store
-│ │ └── searchStore.ts
-│ ├── routes/ # TanStack Router routes
-│ │ └── \_\_root.tsx
-│ │ └── index.tsx
-│ │ └── router.ts
-│ │ └── search.tsx
-│ ├── data/ # Mock data and types
-├── public/ # Static assets
-├── .env # Environment variables
-├── vite.config.ts # Vite configuration
-├── vitest.config.ts # Vitest configuration
-└── tailwind.config.js # Tailwind CSS configuration
-
-```
-
+│   ├── components/       # React components
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── MovieCard.tsx
+│   │   ├── MovieList.tsx
+│   │   ├── Movies.tsx
+│   │   ├── NotFoundPage.tsx
+│   │   ├── Pagination.tsx
+│   │   └── SearchBar.tsx
+│   ├── hooks/            # Custom React hooks
+│   │   └── useMovies.ts
+│   ├── store/            # Zustand store
+│   │   └── searchStore.ts
+│   ├── routes/           # TanStack Router routes
+│   │   ├── __root.tsx
+│   │   ├── index.tsx
+│   │   ├── router.ts
+│   │   └── search.tsx
+│   └── data/             # Mock data and types
+├── public/               # Static assets
+├── .env                  # Environment variables
+├── vite.config.ts         # Vite configuration
+├── vitest.config.ts       # Vitest configuration
+└── tailwind.config.js     # Tailwind CSS configuration
 ```
