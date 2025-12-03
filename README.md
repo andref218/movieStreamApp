@@ -3,6 +3,17 @@
 This project is a **React-based streaming platform** developed as a learning project, inspired by modern streaming services.  
 It allows users to **browse movies** through a dynamic and responsive interface.
 
+## 🖼️ Screenshots / Demo
+
+### Home Screen
+
+![Home Screen](./screenshots/movieStreamApp1.png)
+![Home Screen](./screenshots/movieStreamApp2.png)
+
+### Search Screen
+
+![Search Screen](./screenshots/movieStreamApp3.png)
+
 ---
 
 ## 🎯 Project Objectives
