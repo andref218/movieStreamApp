@@ -119,7 +119,8 @@ movieStreamApp/
 │   │   ├── index.tsx
 │   │   ├── router.ts
 │   │   └── search.tsx
-│   └── data/             # Mock data and types
+│   └── data/             # Mock data
+│   └── types.ts
 ├── public/               # Static assets
 ├── .env                  # Environment variables
 ├── vite.config.ts         # Vite configuration
