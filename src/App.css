@@ -14,8 +14,8 @@
   --radius: 0.625rem;
 
   /* Typography */
-  font-family: "Inter", "Poppins", system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family:
+    "Inter", "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
@@ -31,7 +31,7 @@
   --cineflow-red-hover: #f40612;
   --cineflow-dark: #141414;
   --cineflow-gray: #2f2f2f;
-  --background: #141414; /* Main background */
+  --background: rgba(0, 0, 0, 0.8); /* Main background */
   --foreground: #ffffff; /* Light text */
   --card: #1a1a1a;
   /* Slightly lighter background for cards */
@@ -82,7 +82,9 @@ body {
   padding: 0;
   background-color: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* ===== INTERACTIVE ELEMENTS ===== */

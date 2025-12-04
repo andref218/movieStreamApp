@@ -8,11 +8,12 @@ It allows users to **browse movies** through a dynamic and responsive interface.
 ### Home Screen
 
 ![Home Screen](./screenshots/movieStreamApp1.png)
-![Home Screen](./screenshots/movieStreamApp2.png)
+![Home Screen](./screenshots/movieStreamApp2.png)!
+![Home Screen](./screenshots/movieStreamApp3.png)
 
 ### Search Screen
 
-![Search Screen](./screenshots/movieStreamApp3.png)
+![Search Screen](./screenshots/movieStreamApp4.png)
 
 ---
 
