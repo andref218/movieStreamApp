@@ -1,4 +1,4 @@
-# CineFlow - Movie Stream App
+# Movie Stream App - CineFlow
 
 This project is a **React-based streaming platform** developed as a learning project, inspired by modern streaming services.  
 It allows users to **browse movies** through a dynamic and responsive interface.
@@ -8,12 +8,16 @@ It allows users to **browse movies** through a dynamic and responsive interface.
 ### Home Screen
 
 ![Home Screen](./screenshots/movieStreamApp1.png)
-![Home Screen](./screenshots/movieStreamApp2.png)!
+![Home Screen](./screenshots/movieStreamApp2.png)
 ![Home Screen](./screenshots/movieStreamApp3.png)
 
 ### Search Screen
 
 ![Search Screen](./screenshots/movieStreamApp4.png)
+
+## Movie Screen
+
+![Movie Screen](./screenshots/movieStreamApp5.png)
 
 ---
 
@@ -116,12 +120,14 @@ movieStreamApp/
 │   ├── store/            # Zustand store
 │   │   └── searchStore.ts
 │   ├── routes/           # TanStack Router routes
+│   │   ├── movie/
+│   │       └── $movieId.tsx
 │   │   ├── __root.tsx
 │   │   ├── index.tsx
 │   │   ├── router.ts
 │   │   └── search.tsx
-│   └── data/             # Mock data
-│   └── types.ts
+│   ├── data/             # Mock data
+│   └── types.ts          # Types
 ├── public/               # Static assets
 ├── .env                  # Environment variables
 ├── vite.config.ts         # Vite configuration

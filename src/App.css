@@ -29,13 +29,13 @@
   /* Cineflow brand colors */
   --cineflow-red: #e50914;
   --cineflow-red-hover: #f40612;
-  --cineflow-dark: #141414;
-  --cineflow-gray: #2f2f2f;
-  --background: rgba(0, 0, 0, 0.8); /* Main background */
+  --cineflow-dark: rgba(0, 0, 0, 0.8);
+  --cineflow-gray: rgba(0, 0, 0, 0.8);
+  --background: rgba(0, 0, 0, 1); /* Main background */
   --foreground: #ffffff; /* Light text */
-  --card: #1a1a1a;
+  --card: rgba(0, 0, 0, 0.8);
   /* Slightly lighter background for cards */
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: rgba(0, 0, 0, 0.8);
   --popover: oklch(1 0 0);
 
   --popover-foreground: oklch(0.145 0 0);

@@ -1,10 +1,11 @@
 import { LucideSearch } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useSearchStore } from "../store/searchStore";
 import { router } from "../routes/router";
 
 const SearchBar = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = useSearchStore((state) => state.isVisible);
+  const setIsVisible = useSearchStore((state) => state.setIsVisible);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);

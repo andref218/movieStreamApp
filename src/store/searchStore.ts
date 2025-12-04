@@ -6,6 +6,8 @@ export interface SearchStore {
   query: string;
   results: Movie[];
   setQuery: (q: string) => void;
+  isVisible: boolean;
+  setIsVisible: (v: boolean) => void;
 }
 
 export const useSearchStore = create<SearchStore>((set) => ({
@@ -30,4 +32,6 @@ export const useSearchStore = create<SearchStore>((set) => ({
   //set({ query: q, results: results });
   //console.log("Results", results);
   //},
+  isVisible: false,
+  setIsVisible: (v) => set({ isVisible: v }),
 }));
