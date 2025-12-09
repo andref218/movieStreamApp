@@ -9,7 +9,8 @@ export const Route = createRootRoute({
     <>
       <Header />
       <Outlet />
-      {/* Icon from Tanstack Router to help understand the routes
+      {/* Icon from Tanstack Router Devtools Panel to help understand the routes
+          Keeping this code here in case it's needed in the future.
       <TanStackDevtools
         config={{
           position: "bottom-left",

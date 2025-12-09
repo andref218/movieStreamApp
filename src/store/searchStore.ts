@@ -18,7 +18,7 @@ export const useSearchStore = create<SearchStore>((set) => ({
 
   //<-------- Function that makes the filter of the input manually, -------->
   //<-------- keeping it in case we need this filtering logic based -------->
-  //<-------- on the query eventually.                              ------->//
+  //<-------- on the query in the future.                           ------->//
 
   //(q: string) => {
   // Filter results when the query changes
