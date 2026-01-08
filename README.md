@@ -5,9 +5,14 @@ It allows users to **browse movies** through a dynamic and responsive interface.
 
 ## 🖼️ Screenshots / Demo
 
+## 🌐 Live Demo
+
+Check out my live Movie Stream App:
+[![Visit Movie Stream App](https://img.shields.io/badge/Live%20App-Visit%20Now-brightgreen)](https://cineflow-movie-stream-app.vercel.app/)
+
 ### Home Screen
 
-![Home Screen](./screenshots/movieStreamApp1.png)
+[![Home Screen](./screenshots/movieStreamApp1.png)](https://cineflow-movie-stream-app.vercel.app/)
 ![Home Screen](./screenshots/movieStreamApp2.png)
 ![Home Screen](./screenshots/movieStreamApp3.png)
 
