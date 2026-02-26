@@ -13,8 +13,6 @@ Check out my live Movie Stream App:
 ### Home Screen
 
 [![Home Screen](./screenshots/movieStreamApp1.png)](https://cineflow-movie-stream-app.vercel.app/)
-![Home Screen](./screenshots/movieStreamApp2.png)
-![Home Screen](./screenshots/movieStreamApp3.png)
 
 ### Search Screen
 
